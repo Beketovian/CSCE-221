@@ -1,2 +1,2 @@
 # CSCE-221
-Repo of all my labs and projects done for CSCE-221
+This is for TAMU CSCE-221 taken during spring of 2023. This is here only to showcase my work.
