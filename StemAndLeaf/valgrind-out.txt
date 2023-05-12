@@ -1,0 +1,137 @@
+==6378== Memcheck, a memory error detector
+==6378== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==6378== Using Valgrind-3.18.1-42b08ed5bd-20211015 and LibVEX; rerun with -h for copyright info
+==6378== Command: ./Driver
+==6378== Parent PID: 5770
+==6378== 
+--6378-- 
+--6378-- Valgrind options:
+--6378--    --leak-check=full
+--6378--    --show-leak-kinds=all
+--6378--    --track-origins=yes
+--6378--    --verbose
+--6378--    --log-file=valgrind-out.txt
+--6378-- Contents of /proc/version:
+--6378--   Linux version 5.10.16.3-microsoft-standard-WSL2 (oe-user@oe-host) (x86_64-msft-linux-gcc (GCC) 9.3.0, GNU ld (GNU Binutils) 2.34.0.20200220) #1 SMP Fri Apr 2 22:23:49 UTC 2021
+--6378-- 
+--6378-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand-rdseed
+--6378-- Page sizes: currently 4096, max supported 4096
+--6378-- Valgrind library directory: /usr/libexec/valgrind
+--6378-- Reading syms from /mnt/c/Users/roman/OneDrive/Documents/CSCE221/StemLeafProject/starter_code-20230306T183143Z-001/starter_code/Driver
+--6378-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+--6378--   Considering /usr/lib/debug/.build-id/61/ef896a699bb1c2e4e231642b2e1688b2f1a61e.debug ..
+--6378--   .. build-id is valid
+--6378-- Reading syms from /usr/libexec/valgrind/memcheck-amd64-linux
+--6378--    object doesn't have a symbol table
+--6378--    object doesn't have a dynamic symbol table
+--6378-- Scheduler: using generic scheduler lock implementation.
+--6378-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==6378== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-6378-by-root-on-???
+==6378== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-6378-by-root-on-???
+==6378== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-6378-by-root-on-???
+==6378== 
+==6378== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==6378== don't want to do, unless you know exactly what you're doing,
+==6378== or are doing some strange experiment):
+==6378==   /usr/bin/vgdb --pid=6378 ...command...
+==6378== 
+==6378== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==6378==   /path/to/gdb ./Driver
+==6378== and then give GDB the following command
+==6378==   target remote | /usr/bin/vgdb --pid=6378
+==6378== --pid is optional if only one valgrind process is running
+==6378== 
+--6378-- REDIR: 0x402aa60 (ld-linux-x86-64.so.2:strlen) redirected to 0x580bcec2 (???)
+--6378-- REDIR: 0x402a830 (ld-linux-x86-64.so.2:index) redirected to 0x580bcedc (???)
+--6378-- Reading syms from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so
+--6378--    object doesn't have a symbol table
+--6378-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+--6378--    object doesn't have a symbol table
+==6378== WARNING: new redirection conflicts with existing -- ignoring it
+--6378--     old: 0x0402aa60 (strlen              ) R-> (0000.0) 0x580bcec2 ???
+--6378--     new: 0x0402aa60 (strlen              ) R-> (2007.0) 0x0484ee30 strlen
+--6378-- REDIR: 0x4027240 (ld-linux-x86-64.so.2:strcmp) redirected to 0x484fcd0 (strcmp)
+--6378-- REDIR: 0x402afc0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4853840 (mempcpy)
+--6378-- Reading syms from /usr/lib/x86_64-linux-gnu/libasan.so.6.0.0
+--6378-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+--6378--    object doesn't have a symbol table
+--6378-- Reading syms from /usr/lib/x86_64-linux-gnu/libm.so.6
+--6378--   Considering /usr/lib/debug/.build-id/27/e82301dba6c3f644404d504e1bb1c97894b433.debug ..
+--6378--   .. build-id is valid
+--6378-- Reading syms from /usr/lib/x86_64-linux-gnu/libubsan.so.1.0.0
+--6378-- Reading syms from /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+--6378--    object doesn't have a symbol table
+--6378-- Reading syms from /usr/lib/x86_64-linux-gnu/libc.so.6
+--6378--   Considering /usr/lib/debug/.build-id/69/389d485a9793dbe873f0ea2c93e02efaa9aa3d.debug ..
+--6378--   .. build-id is valid
+==6378== WARNING: new redirection conflicts with existing -- ignoring it
+--6378--     old: 0x05c59ce0 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--6378--     new: 0x05c59ce0 (memalign            ) R-> (1017.0) 0x0484e050 aligned_alloc
+==6378== WARNING: new redirection conflicts with existing -- ignoring it
+--6378--     old: 0x05c59ce0 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--6378--     new: 0x05c59ce0 (memalign            ) R-> (1017.0) 0x0484e020 aligned_alloc
+==6378== WARNING: new redirection conflicts with existing -- ignoring it
+--6378--     old: 0x05c59ce0 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--6378--     new: 0x05c59ce0 (memalign            ) R-> (1017.0) 0x0484e050 aligned_alloc
+==6378== WARNING: new redirection conflicts with existing -- ignoring it
+--6378--     old: 0x05c59ce0 (memalign            ) R-> (1011.0) 0x0484e080 memalign
+--6378--     new: 0x05c59ce0 (memalign            ) R-> (1017.0) 0x0484e020 aligned_alloc
+--6378-- REDIR: 0x5c5c7a0 (libc.so.6:strnlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5ca60 (libc.so.6:strpbrk) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5c360 (libc.so.6:strcmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c7ad50 (libc.so.6:wcsnlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5d750 (libc.so.6:memset) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c795c0 (libc.so.6:wcslen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5dc90 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c793f0 (libc.so.6:wcschr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5c2e0 (libc.so.6:index) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5c9e0 (libc.so.6:rindex) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5d620 (libc.so.6:memmove) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+==6378== Preferring higher priority redirection:
+--6378--     old: 0x05d54940 (__memcpy_avx_unalign) R-> (2018.0) 0x04850f90 __memcpy_avx_unaligned_erms
+--6378--     new: 0x05d54940 (__memcpy_avx_unalign) R-> (2018.1) 0x04852880 memmove
+--6378-- REDIR: 0x5c79470 (libc.so.6:wcscmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5da60 (libc.so.6:stpncpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c79a30 (libc.so.6:wmemchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5c8b0 (libc.so.6:strncmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5daf0 (libc.so.6:strcasecmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5c4a0 (libc.so.6:strcspn) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c794f0 (libc.so.6:wcscpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5c250 (libc.so.6:strcat) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5dbe0 (libc.so.6:strncasecmp_l) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5d500 (libc.so.6:bcmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c655f0 (libc.so.6:memrchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5f090 (libc.so.6:strchrnul) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5c410 (libc.so.6:strcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5db90 (libc.so.6:strcasecmp_l) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5c720 (libc.so.6:strlen) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5c950 (libc.so.6:strncpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5d9d0 (libc.so.6:stpcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5d470 (libc.so.6:memchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5cb80 (libc.so.6:strspn) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5d850 (libc.so.6:mempcpy) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5db40 (libc.so.6:strncasecmp) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x5c5f000 (libc.so.6:rawmemchr) redirected to 0x483f220 (_vgnU_ifunc_wrapper)
+--6378-- REDIR: 0x4915430 (libasan.so.6:free) redirected to 0x484b210 (free)
+==6378== 
+==6378== Process terminating with default action of signal 11 (SIGSEGV)
+==6378==  General Protection Fault
+==6378==    at 0x5C4DF42: __pthread_once_slow (pthread_once.c:114)
+==6378==    by 0x5D1CA52: __rpc_thread_variables (rpc_thread.c:59)
+==6378==    by 0x5D6FD8C: free_mem (in /usr/lib/x86_64-linux-gnu/libc.so.6)
+==6378==    by 0x5D6F8C1: __libc_freeres (in /usr/lib/x86_64-linux-gnu/libc.so.6)
+==6378==    by 0x483F1B2: _vgnU_freeres (in /usr/libexec/valgrind/vgpreload_core-amd64-linux.so)
+==6378==    by 0x4A493DF: ???
+==6378==    by 0x493F2B6: __sanitizer::Die() (sanitizer_termination.cpp:59)
+==6378==    by 0x4915398: __asan::AsanCheckDynamicRTPrereqs() (asan_linux.cpp:181)
+==6378==    by 0x4921544: __asan::AsanInitInternal() [clone .part.0] (asan_rtl.cpp:420)
+==6378==    by 0x40065BD: _dl_init (dl-init.c:102)
+==6378==    by 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+==6378== 
+==6378== HEAP SUMMARY:
+==6378==     in use at exit: 0 bytes in 0 blocks
+==6378==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==6378== 
+==6378== All heap blocks were freed -- no leaks are possible
+==6378== 
+==6378== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
